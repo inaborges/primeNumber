@@ -1,0 +1,32 @@
+function isPrime(num){
+  
+  let prime = true;
+  
+  if (num === 1 ){
+    console.log('O número ' + num + ' não é um número primo.')
+  }
+  
+  else if (num > 1){
+    for(let i = 2; i < num; i++){
+      if(num % i == 0){
+        prime = false;
+        break;
+      }
+    }
+    
+    if(prime){
+      console.log('O número ' + num + ' é um número primo.');
+    } else {
+      console.log('O número ' + num + ' não é um número primo.');
+    }
+    
+    
+  }
+  
+  else{
+    console.log('O número ' + num + ' não é um número primo.');
+  }
+  
+}
+
+console.log(isPrime(13));
